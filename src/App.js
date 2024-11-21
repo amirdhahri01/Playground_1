@@ -28,13 +28,13 @@ function App() {
   //   })
   // }
   // console.log(formData);
-  const [deviceNameInputValue , setDeviceNameInputValue] = useState("");
-  const [devices , setDevices] = useState(["iphone", "mac", "samsung", "windows"]);
+  const [deviceNameInputValue, setDeviceNameInputValue] = useState("");
+  const [devices, setDevices] = useState([{ id: 1, name: "iphone" }, { id: 2, name: "mac" }, { id: 3, name: "samsung" }, { id: 4, name: "windows" }]);
   const devicesList = devices.map((device) => {
     return <li>{device} <button>Delete</button></li>
   })
   const handleAddClick = (e) => {
-    setDevices([...devices ,deviceNameInputValue])
+    setDevices([...devices, deviceNameInputValue])
   }
   return (
     <>
