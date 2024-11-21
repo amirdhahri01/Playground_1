@@ -31,7 +31,7 @@ function App() {
   const [deviceNameInputValue , setDeviceNameInputValue] = useState("");
   const [devices , setDevices] = useState(["iphone", "mac", "samsung", "windows"]);
   const devicesList = devices.map((device) => {
-    return <li>{device}</li>
+    return <li>{device} <button>Delete</button></li>
   })
   const handleAddClick = (e) => {
     setDevices([...devices ,deviceNameInputValue])
@@ -44,8 +44,6 @@ function App() {
         </ul>
         <div>
           <input type="text" name="" id="" value={deviceNameInputValue} onChange={(e) => {
-            console.log(e.target.value);
-            
             setDeviceNameInputValue(e.target.value);
           }} />
           <button onClick={handleAddClick}>Add</button>
