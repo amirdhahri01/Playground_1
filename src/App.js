@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import "./App.css";
 // let maxID = 4;
 function App() {
@@ -88,16 +88,39 @@ function App() {
   // const count = useRef(0);
 
   // const [render , setRender] = useState(0);
-  
+
   // useEffect(()=>{
   //   count.current = count.current + 1;
   //   console.log(count.current);
   // },[render])
 
+  // const [counterOne, setCounterOne] = useState(0);
+  // const [counterTwo, setCounterTwo] = useState(0);
+
+  // const handleClickOne = (e) => {
+
+  //   setCounterOne(prev => prev + 1)
+  // }
+  // const handleClickTwo = (e) => {
+  //   setCounterTwo(prev => prev + 1)
+  // }
+  // const isEven = useMemo(() => {
+  //   let i = 0;
+  //   while (i < 1e9) i++;
+  //   if (counterOne % 2 === 0) {
+  //     return true;
+  //   }
+  //   return false;
+  // }, [counterOne]);
+
 
   return (
     <>
-      
+    
+      {/* <button onClick={handleClickOne}>+</button>
+      <h1>{counterOne} : {isEven ? "even" : "odd"}</h1>
+      <button onClick={handleClickTwo}>+</button>
+      <h1>{counterTwo} </h1> */}
       {/* <h1>{render}</h1>
       <button onClick={(e) => setRender(c => c + 1)}>+</button> */}
       {/* <h1>{counter}</h1>
