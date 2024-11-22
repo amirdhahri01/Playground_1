@@ -5,7 +5,7 @@ function CurrentUser() {
     const {userOne}  = useContext(UserContext);
     return (
         <div>{userOne}</div>
-        <
+        
     )
 }
 

@@ -1,10 +1,10 @@
 import "./App.css";
-import CallBack from "./CallBack";
-import Context  from "./hooks/context/Context"
+import Reducer from "./hooks/reducer/Reducer";
+
 function App() {
   return (
     <>
-     <Context />
+     <Reducer />
     </>
   );
 }
