@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-let maxID = 4;
+// let maxID = 4;
 function App() {
   // const [formData, setFormData] = useState({
   //   name : "",
@@ -49,18 +49,35 @@ function App() {
   // const devicesList = devices.map((device) => {
   //   return <li key={device.id}>{device.name} <button onClick={(e) => { handleDeleteClick(device.id) }}>Delete</button><button onClick={(e) => { handleEditClick(device.id) }}>Edit</button></li>
   // })
-  const [count , setCount] = useState(0);
-  const handleClick = (e) => {
-    e.preventDefault();
-    setCount(count + 1 )
-    setCount(count + 1 )
-  }
+  // const [count , setCount] = useState(0);
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   setCount(count + 1 )
+  //   setCount(count + 1 )
+  // }
+  // const [counter , setCounter] = useState(0);
+  // const handleClick = (e) => {
+  //   setCounter(c => c + 1);
+  // }
+  // const [posts , setPosts] = useState([]);
+  // fetch("https://jsonplaceholder.typicode.com/posts").then(res => {
+  //  return res.json();
+  // }).then( data => {
+  //   setPosts(data);
+  // })
   return (
     <>
-      <form action="">
+       {/* {posts && posts.length > 0 && posts.map(post => {
+         return <div className="post" key={post.id}>
+          <p>UserID : {post.userId}</p>
+          <p>Title : {post.title}</p>
+          <p>Body : {post.body}</p>
+         </div>
+       })} */}
+      {/* <form action="">
         <h1>{count}</h1>
         <button onClick={handleClick}>+</button>
-      </form>
+      </form> */}
       {/* <div className="app" style={{ marginTop: "100px", fontSize: "30px" }}>
         <ul>
           {devicesList}
