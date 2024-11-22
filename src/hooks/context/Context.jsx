@@ -1,14 +1,15 @@
 import React, { createContext, useState } from 'react'
 import User from './User';
-
-export const UserContext = createContext(null);
+import { UserContext } from './UserContext';
 
 function Context() {
-  
+
   const [userOne, setUserOne] = useState("Amir Dhahri");
 
+  const userValues = {userOne , setUserOne}
+
   return (
-    <UserContext.Provider value={userOne}>
+    <UserContext.Provider value={userValues}>
       <User/>
     </UserContext.Provider>
   )

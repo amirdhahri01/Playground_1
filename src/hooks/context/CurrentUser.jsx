@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { UserContext } from './Context'
 
-function CurrentUser({user}) {
+function CurrentUser() {
+    const {userOne}  = useContext(UserContext);
     return (
-        <div>{user}</div>
+        <div>{userOne}</div>
+        <
     )
 }
 

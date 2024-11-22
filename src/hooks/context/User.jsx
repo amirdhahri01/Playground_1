@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import Card from './Card'
 import CurrentUser from './CurrentUser'
 
-function User({ user }) {
+function User() {
+  
     return (
         <>
             <Card>
-                <CurrentUser user={user} />
+                <CurrentUser/>
             </Card>
         </>
     )
