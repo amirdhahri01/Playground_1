@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-
+let maxID = 4;
 function App() {
   // const [formData, setFormData] = useState({
   //   name : "",
@@ -28,17 +28,40 @@ function App() {
   //   })
   // }
   // console.log(formData);
-  const [deviceNameInputValue, setDeviceNameInputValue] = useState("");
-  const [devices, setDevices] = useState([{ id: 1, name: "iphone" }, { id: 2, name: "mac" }, { id: 3, name: "samsung" }, { id: 4, name: "windows" }]);
-  const devicesList = devices.map((device) => {
-    return <li>{device} <button>Delete</button></li>
-  })
-  const handleAddClick = (e) => {
-    setDevices([...devices, deviceNameInputValue])
+  // const handleAddClick = (e) => {
+  //   setDevices([...devices, { id: maxID + 1, name: deviceNameInputValue }])
+  //   maxID++;
+  // }
+  // const handleDeleteClick = (id) => {
+  //   setDevices(oldDevices => [...oldDevices].filter(device => device.id !== id))
+  // }
+  // const handleEditClick = (id) => {
+  //   setDevices(oldDevices => [...oldDevices].map(device => {
+  //     if(device.id === id){
+  //       return {...device , name:device.name + "0"}
+  //     }else{
+  //       return device;
+  //     }
+  //   }))
+  // }
+  // const [deviceNameInputValue, setDeviceNameInputValue] = useState("");
+  // const [devices, setDevices] = useState([{ id: 1, name: "iphone" }, { id: 2, name: "mac" }, { id: 3, name: "samsung" }, { id: 4, name: "windows" }]);
+  // const devicesList = devices.map((device) => {
+  //   return <li key={device.id}>{device.name} <button onClick={(e) => { handleDeleteClick(device.id) }}>Delete</button><button onClick={(e) => { handleEditClick(device.id) }}>Edit</button></li>
+  // })
+  const [count , setCount] = useState(0);
+  const handleClick = (e) => {
+    e.preventDefault();
+    setCount(count + 1 )
+    setCount(count + 1 )
   }
   return (
     <>
-      <div className="app" style={{ marginTop: "100px", fontSize: "30px" }}>
+      <form action="">
+        <h1>{count}</h1>
+        <button onClick={handleClick}>+</button>
+      </form>
+      {/* <div className="app" style={{ marginTop: "100px", fontSize: "30px" }}>
         <ul>
           {devicesList}
         </ul>
@@ -48,7 +71,7 @@ function App() {
           }} />
           <button onClick={handleAddClick}>Add</button>
         </div>
-      </div>
+      </div> */}
       {/* <form action="">
         <label htmlFor="name">Name : </label>
         <input value={formData.name} name="name" type="text" id="name" onChange={handleChange} />
